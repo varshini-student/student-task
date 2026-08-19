@@ -119,50 +119,115 @@
                 </button>
 
             </div>
+
+
+            <!-- Task List -->
             <div class="task-list">
+
+                <!-- Task 1 -->
                 <div class="task">
+
                     <div class="task-left">
-                        <input type="checkbox">
+
+                        <input 
+                            type="checkbox" 
+                            onchange="toggleTask(this)"
+                        >
+
                         <div>
                             <h3>Complete Java Practice</h3>
                             <p>Practice 3 array problems</p>
                         </div>
+
                     </div>
+
                     <span class="priority high">
                         High
                     </span>
+
                 </div>
+
+
+                <!-- Task 2 -->
                 <div class="task">
+
                     <div class="task-left">
-                        <input type="checkbox">
+
+                        <input 
+                            type="checkbox" 
+                            onchange="toggleTask(this)"
+                        >
+
                         <div>
                             <h3>Finish Portfolio</h3>
                             <p>Update project section</p>
                         </div>
+
                     </div>
+
                     <span class="priority medium">
                         Medium
                     </span>
+
                 </div>
+
+
+                <!-- Task 3 -->
                 <div class="task">
+
                     <div class="task-left">
-                        <input type="checkbox">
+
+                        <input 
+                            type="checkbox" 
+                            onchange="toggleTask(this)"
+                        >
+
                         <div>
                             <h3>Practice SQL</h3>
                             <p>Solve 5 SQL queries</p>
                         </div>
+
                     </div>
+
                     <span class="priority low">
                         Low
                     </span>
+
                 </div>
+
             </div>
+
         </section>
+
     </main>
+
+
+    <!-- JavaScript -->
     <script>
+
+        // Mark task as completed
+        function toggleTask(checkbox) {
+
+            const task = checkbox.closest(".task");
+
+            if (checkbox.checked) {
+
+                task.style.opacity = "0.5";
+
+            } else {
+
+                task.style.opacity = "1";
+
+            }
+
+        }
+
+
+        // Logout function
         function logout() {
 
             window.location.href = "index.html";
+
         }
 
     </script>
